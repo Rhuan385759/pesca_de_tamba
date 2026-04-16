@@ -29,6 +29,12 @@ nav li{
     display: inline;
     margin-right: 6%;
 }
+
+nav li a{
+    color: black;
+    text-decoration: none;
+}
+
 .divHeader{
     position: relative;
 }
