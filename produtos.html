@@ -9,6 +9,13 @@
 <!--javascript-->    
     <script>
         alert("Conheça Nossos produtos");
+
+        function abrirDetalhes(nome, imagem, descricao){
+
+            url=`pop_produtos.html?nomeProduto=${encodeURIComponent(nome)}&imgProduto=${encodeURIComponent(imagem)}&descricaoProduto=${encodeURIComponent(descricao)}}`
+
+            window.open(url , "_blank" , "width = 800, height = 700")
+        }
     </script>
 
 </head>
@@ -46,7 +53,11 @@
 
     <!--Exibição dos Produtos-->   
               <div class="container">
-                   <div class="card">
+                <script>
+                    //Descrição do produto
+                    desc_produto=" Boias de pesca: mantêm a isca na profundidade certa e indicam a fisgada. Ideais para diferentes tipos de pesca, com modelos variados e práticos."
+                </script>
+                   <div class="card" onclick="abrirDetalhes('Boia de pesca' , '../img/produtos/boiacev-robusta-65g-41730.jpg' , desc_produto)">
                        <img src="../img/produtos/boiacev-robusta-65g-41730.jpg"/>
                        <h2>Boia de Pesca</h2>
                        <p>Boias Cevadeira, Boias Torpedo, Boias Lambari</p>
